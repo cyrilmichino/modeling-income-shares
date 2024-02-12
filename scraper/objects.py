@@ -2,21 +2,17 @@ from dataclasses import dataclass
 from time import sleep
 
 from selenium.webdriver import Chrome
-
-import constants as c
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+import scraper.constants as c
 
 @dataclass
 class Contact():
     name: str = None
     occupation: str = None
     url: str = None
-
 
 
 @dataclass
@@ -40,8 +36,6 @@ class Experience(Institution):
     duration: str = None
     location: str = None
 
-   
-
 
 @dataclass
 class Education(Institution):
@@ -49,7 +43,6 @@ class Education(Institution):
     to_date: str = None
     description: str = None
     degree: str = None
-
 
 
 @dataclass
@@ -65,6 +58,7 @@ class Volunteering(Institution):
     company_name: str=None
     event_name: str=None
     linkedin_url: str=None
+
 
 @dataclass
 class Accomplishment(Institution):

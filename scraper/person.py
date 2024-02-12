@@ -1,15 +1,19 @@
+import os
+import re
+import json
+import time
 import requests
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from objects import Experience, Education, Scraper, Interest, Volunteering, Accomplishment, Contact
-import os
-from linkedin_scraper import selectors
-import json
-import re
-import time
+from scraper.objects import Experience, Education, Scraper, Interest, Volunteering, Accomplishment, Contact
 from selenium.webdriver.support.ui import Select
+
+from scraper import selectors
+
+
 class Person(Scraper):
 
     __TOP_CARD = "pv-top-card"
