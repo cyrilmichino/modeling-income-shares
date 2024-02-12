@@ -4,7 +4,7 @@ import glob
 from jobs import Job
 from person import Person
 from company import Company
-from job_search import JobSearch
+#from job_search import JobSearch
 from objects import Institution, Experience, Education, Contact
 
 
